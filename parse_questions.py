@@ -17,13 +17,8 @@ def read_text(file_path):
 # STEP 2: Split questions
 # -------------------------------
 def split_questions(text):
-    # normalize weird formats first
-    text = re.sub(r'(\d+)\s*,', r'\1.', text)   # "6 ," → "6."
-    text = re.sub(r'(\d+)\s*\)', r'\1.', text)  # "6)" → "6."
-
-    # now split
+    # Split at question numbers like "1.", "2."
     questions = re.split(r'\n(?=\d+\.)', text)
-
     return questions
 
 

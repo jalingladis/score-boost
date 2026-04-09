@@ -24,7 +24,7 @@ LANG = "eng"  # requires Tamil installed
 from pdf2image import convert_from_path
 import os
 
-def pdf_to_images(pdf_path, dpi=400):
+def pdf_to_images(pdf_path, dpi=300):
     print("[INFO] Converting PDF to images...")
 
     pages = convert_from_path(pdf_path, dpi=dpi)
